@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Active navigation based on scroll position
     const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navLinkItems = document.querySelectorAll('.nav-links a'); // Renamed this variable
     
     window.addEventListener('scroll', () => {
         let current = '';
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        navLinks.forEach(link => {
+        navLinkItems.forEach(link => { // Updated variable name here too
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active');
